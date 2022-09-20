@@ -1,56 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import React, { useState } from 'react';
+import { BrowserRouter, Routes,  Route } from "react-router-dom"
 import './App.css';
+import Header from './components/Header';
+import LeftSidebar from './components/LeftSidebar';
+import RightSidebar from './components/RightSidebar';
+import { useContextState } from './context/contextProvider';
+import Inbox from './pages/Inbox';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { IconButton } from '@mui/material';
 
 function App() {
+  const {sidebar, setSidebar, leftSidebar, setLeftSidebar} = useContextState()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div className="app">
+      <Header />
+
+      <div className='control-right-sidebar'>
+        {leftSidebar? (
+          <div className='right-sidebar-icon'>
+            <IconButton onClick={() => setLeftSidebar(prev => 
+          !prev)}>
+              <ArrowForwardIosIcon />
+            </IconButton>
+          </div>
+        ) : (
+          <IconButton onClick={() => setLeftSidebar(prev => 
+          !prev)}>
+            <ArrowBackIosIcon />
+          </IconButton>
+        )}
+      </div>
+      
+      
+      <BrowserRouter>
+        <div className='app-body'>
+          {sidebar? (
+            <div className=''>
+                <LeftSidebar />
+            </div>
+            ) : ("") 
+          }
+          <div className='page-body'>
+          <Routes>
+            <Route path='/' element={<Inbox />}  />
+            {/* <Route path='/' element={}/>
+            <Route path='/' element={}/> */}
+          </Routes>
+          </div>
+          {leftSidebar && <RightSidebar />}
+        </div>
+      </BrowserRouter>
     </div>
   );
 }

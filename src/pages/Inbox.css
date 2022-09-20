@@ -1,0 +1,12 @@
+.inbox{
+    height: inherit;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 768px){
+    .inbox{
+        background-color: #c3c4c7;
+    }
+  }

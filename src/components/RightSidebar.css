@@ -1,0 +1,22 @@
+.right-sidebar{
+    background-color: inherit;
+    padding: 1px;
+}
+
+.right-sidebar-body{
+    margin: 10px  0px;
+}
+
+.right-sidebar-last-child{
+    border-top: 1px solid black;
+    margin-top: 40px;
+    padding-top: 40px;
+}
+
+.MuiSvgIcon-root{
+    padding: 10px;
+}
+
+.MuiSvgIcon-root:hover{
+    background-color: white;
+}

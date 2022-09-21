@@ -1,17 +1,55 @@
 .page-header,
-.select{
+.select,
+.check-input > div{
     display: flex; 
     align-items: center;
 }
 
-.select{
-   
+.check-input{
+  position: relative;
+  margin-left: 10px;
 }
 
-.select > input:hover{
-    cursor: pointer;
-    background-color: gray;
+.check-input > div{
+  padding: 6px 4px;
+  cursor: pointer;
 }
+
+.check-input > div:hover{
+  background: rgb(199, 199, 199);
+}
+
+.check-input > div > input{
+  font-size: 20px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.check-input > div > span > .MuiSvgIcon-root{
+  padding: 0 !important;
+}
+
+.check-items{
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-color: white;
+  padding: 10px 0;
+  box-shadow: 1px 1px 5px 5px rgb(211, 211, 211);
+  border-radius: 6px;
+}
+
+.check-item{
+  cursor: pointer;
+  list-style: none;
+  padding: 5px 40px;
+}
+
+.check-item:hover{
+  background: rgb(235, 232, 232);
+}
+
 
 @media only screen and (max-width: 768px){
     .page-header{

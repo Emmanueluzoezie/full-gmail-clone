@@ -2,7 +2,7 @@ import InboxIcon from '@mui/icons-material/Inbox';
 import StarIcon from '@mui/icons-material/Star';
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
 import NoteIcon from '@mui/icons-material/Note';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import LabelIcon from '@mui/icons-material/Label';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
@@ -16,6 +16,8 @@ import ErrorIcon from '@mui/icons-material/Error';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SettingsIcon from '@mui/icons-material/Settings';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import ChatIcon from '@mui/icons-material/Chat';
+import AddIcon from '@mui/icons-material/Add';
 
 export const leftSideBarLink = [
     {
@@ -38,6 +40,46 @@ export const leftSideBarLink = [
         name: "Draft",
         icon: <NoteIcon />
     },
+]
+
+export const moreLeftSideBarLink = [
+    {
+        name: "Important",
+        icon: <LabelImportantIcon />
+    },
+    {
+        name: "Chats",
+        icon: <ChatIcon />
+    },
+    {
+        name: "Scheduled",
+        icon: <ScheduleSendIcon />
+    },
+    {
+        name: "All mails",
+        icon: <MailIcon />
+    },
+    {
+        name: "Spam",
+        icon: <ErrorIcon />
+    },
+    {
+        name: "Bin",
+        icon: <DeleteIcon />
+    },
+    {
+        name: "Categories",
+        icon: <LabelIcon />
+    },
+    {
+        name: "Manage label",
+        icon: <SettingsIcon />
+    },
+    {
+        name: "Create new label",
+        icon: <AddIcon />
+    },
+    
 ]
 
 export const leftSideBarMobile = [
@@ -184,3 +226,5 @@ export const rigtSideBarLink = [
         icon: <AccountCircleIcon />
     }
 ]
+
+export const checkInputItems = ["All", "None", "Read", "Unread", "Starred", "Unstarred"]

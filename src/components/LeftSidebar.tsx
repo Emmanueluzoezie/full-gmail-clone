@@ -4,9 +4,10 @@ import "./LeftSidebar.css"
 import CloseIcon from '@mui/icons-material/Close';
 import { IconButton } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
-import { leftSidebarFooter, leftSideBarLink, leftSideBarMobile } from '../data/data';
+import { leftSidebarFooter, leftSideBarLink, leftSideBarMobile, moreLeftSideBarLink } from '../data/data';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import LabelIcon from '@mui/icons-material/Label';
 
 const LeftSidebar: React.FC = () => {
     const {sidebar, setSidebar, activeMenu, setActiveMenu, screenSize, setScreenSize, moreSidebarItems, setMoreSidebarItems} = useContextState()
@@ -43,7 +44,7 @@ const LeftSidebar: React.FC = () => {
             <span className='items icons'><KeyboardArrowUpIcon /></span>
             <p className={`${activeMenu? "sidebar-item-p" : "sidebar-item-y"}`}>Less</p>
             </div>
-            {leftSideBarLink.map((item, index) => (
+            {moreLeftSideBarLink.map((item, index) => (
                 <div className='sidebar-item' key={index}>
                 <span className='items icons'>{item.icon}</span>
                 <span className={`${activeMenu? "sidebar-item-p" : "sidebar-item-y"}`}>{item.name}</span>
@@ -57,11 +58,19 @@ const LeftSidebar: React.FC = () => {
             <p className={`${activeMenu? "sidebar-item-p" : "sidebar-item-y"}`}>More</p>
             </div>
         )}
+        <div className='sidebar-item' style={{ marginTop:"20px", marginBottom:"10px"}}>
+            <span className={`${activeMenu? "sidebar-item-p" : "sidebar-item-y"}`}>Label</span>
+            <span className='items icons'><LabelIcon /></span>
+        </div>
+        <div className='sidebar-item'>
+            <span className='items icons'><LabelIcon /></span>
+            <span className={`${activeMenu? "sidebar-item-p" : "sidebar-item-y"}`}>Notes</span>
+        </div>
         </div>
         <div className='sidebar-mobile-links'>
         {leftSideBarMobile.map((item, index) => (
             <div className='sidebar-mobile-items' key={index} >
-            <span >{item.title}</span>
+            <div className='sidebar-mobile-items-title'>{item.title}</div>
             {item.links.map((link, index) => (
                 <div className='sidebar-mobile-link' key={index}>
                     <span>{link.icon}</span>

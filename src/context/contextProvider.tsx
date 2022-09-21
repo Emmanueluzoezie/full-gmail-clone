@@ -11,6 +11,8 @@ interface IstateContext {
   setLeftSidebar: Dispatch<SetStateAction<boolean>>,
   moreSidebarItems:boolean,
   setMoreSidebarItems: Dispatch<SetStateAction<boolean>>
+  checkbox: boolean,
+  setCheckbox: Dispatch<SetStateAction<boolean>>
 }
 
 const initialState = {
@@ -23,8 +25,9 @@ const initialState = {
    leftSidebar: true,
   setLeftSidebar: () => true,
   moreSidebarItems: false,
-  setMoreSidebarItems: () => false
-
+  setMoreSidebarItems: () => false,
+  checkbox: false,
+  setCheckbox: () => false
 }
 
 const StateContext = createContext<IstateContext>(initialState)
@@ -39,9 +42,10 @@ export const ContextProvider: React.FC<Childern> = ({children}) => {
   const [activeMenu, setActiveMenu] = useState<boolean>(false)
   const [leftSidebar, setLeftSidebar] = useState<boolean>(true)
   const [moreSidebarItems, setMoreSidebarItems] = useState<boolean>(true)
+  const [checkbox, setCheckbox] = useState<boolean>(false)
 
   return (
-    <StateContext.Provider value={{sidebar, setSidebar, screenSize, setScreenSize, activeMenu, setActiveMenu, leftSidebar, setLeftSidebar, moreSidebarItems, setMoreSidebarItems}}>
+    <StateContext.Provider value={{sidebar, setSidebar, screenSize, setScreenSize, activeMenu, setActiveMenu, leftSidebar, setLeftSidebar, moreSidebarItems, setMoreSidebarItems, checkbox, setCheckbox}}>
       {children}
     </StateContext.Provider>
   )

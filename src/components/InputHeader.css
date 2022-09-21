@@ -1,0 +1,67 @@
+.input-header,
+.input-header > div,
+.title-items{
+    display: flex;
+    align-items: center;
+}
+
+.input-header > div{
+    width: 120px;
+    height: 50px;
+    padding-right: 60px;
+}
+
+.input-header > div:hover{
+    cursor: pointer;
+    background-color: rgb(228, 228, 228);
+}
+
+.MuiSvgIcon-root:hover  {
+    cursor: pointer !important;  
+}
+
+.title-items{
+    padding: 6px 0px;
+    margin: 0;
+  }
+
+.title-items > h5{
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0;
+margin: 0;
+}
+
+.promotion{
+  background-color: rgb(10, 163, 10);
+  padding: 1px 4px;
+  margin-left: 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+  font-weight: 700;
+}
+
+.social{
+    background-color: rgb(5, 119, 226);
+    padding: 1px 4px;
+    margin-left: 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+    font-weight: 700;
+  }
+
+.titles > p{
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+}
+
+@media only screen and (max-width: 768px){
+    .input-header{
+      display: none;
+    }
+}

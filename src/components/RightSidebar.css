@@ -20,3 +20,9 @@
 .MuiSvgIcon-root:hover{
     background-color: white;
 }
+
+@media only screen and (max-width: 768px){
+    .right-sidebar{
+        display: none;
+    }
+}

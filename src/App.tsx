@@ -11,7 +11,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { IconButton } from '@mui/material';
 
 function App() {
-  const {sidebar, setSidebar, leftSidebar, setLeftSidebar} = useContextState()
+  const {sidebar, setSidebar, leftSidebar, setLeftSidebar, activeMenu} = useContextState()
 
   return (
     <div className="app">
@@ -36,20 +36,27 @@ function App() {
       
       <BrowserRouter>
         <div className='app-body'>
+          <div className='left-app-body'>
           {sidebar? (
-            <div className=''>
+            <div className='left-app-sidebar'>
                 <LeftSidebar />
             </div>
-            ) : ("") 
+            ) : (<div className='noleft-app-body'/>) 
           }
-          <div className='page-body'>
-          <Routes>
-            <Route path='/' element={<Inbox />}  />
-            {/* <Route path='/' element={}/>
-            <Route path='/' element={}/> */}
-          </Routes>
           </div>
-          {leftSidebar && <RightSidebar />}
+          <div className={leftSidebar && activeMenu?"center-app-body" : "no-activemenu" && leftSidebar && !activeMenu?"center-app-body-nomenu" : "no-activemenu" && (activeMenu && !leftSidebar? "center-app-noleftsidebar" : "center-app-body-nomenu")&& (!activeMenu && !leftSidebar? "no-no": "center-app-noleftsidebar")}>
+            <div>
+              <Routes>
+                <Route path='/' element={<Inbox />}  />
+                {/* <Route path='/' element={}/>
+                <Route path='/' element={}/> */}
+              </Routes> 
+          </div>
+          </div>
+          {leftSidebar &&
+          <div className='right-app-body'>
+          <RightSidebar />
+          </div>}
         </div>
       </BrowserRouter>
     </div>

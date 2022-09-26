@@ -19,6 +19,17 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import ChatIcon from '@mui/icons-material/Chat';
 import AddIcon from '@mui/icons-material/Add';
 
+import TextFormatIcon from '@mui/icons-material/TextFormat';
+import AttachFileIcon from '@mui/icons-material/AttachFile';
+import InsertLinkIcon from '@mui/icons-material/InsertLink';
+import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
+import AddToDriveIcon from '@mui/icons-material/AddToDrive';
+import InsertPhotoIcon from '@mui/icons-material/InsertPhoto';
+import LockClockIcon from '@mui/icons-material/LockClock';
+import ModeEditOutlineIcon from '@mui/icons-material/ModeEditOutline';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+
+
 export const leftSideBarLink = [
     {
         name: "Inbox",
@@ -228,3 +239,15 @@ export const rigtSideBarLink = [
 ]
 
 export const checkInputItems = ["All", "None", "Read", "Unread", "Starred", "Unstarred"]
+
+export const composeIcons = [
+    <TextFormatIcon />,
+    <AttachFileIcon />,
+    <InsertLinkIcon />,
+    <InsertEmoticonIcon />,
+    <AddToDriveIcon />,
+    <InsertPhotoIcon />,
+    <LockClockIcon />,
+    <ModeEditOutlineIcon />,
+    <MoreVertIcon />
+]

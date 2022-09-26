@@ -5,9 +5,13 @@
     align-items: center;
 }
 
+/* .page-header{
+  position: static;
+} */
+
 .check-input{
   position: relative;
-  margin-left: 10px;
+  margin-left: 24px;
 }
 
 .check-input > div{

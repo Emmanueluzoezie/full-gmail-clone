@@ -1,34 +1,22 @@
 .app{
   height: 100vh;
-  background-color: #dfdfdf;
+  background-color: #f5f5f5;
   position: relative;
-}
-
-.app-body{
-  display: flex;
-}
-
-.page-body{
-  flex: 1;
-  margin: 0px 5px  0px 25px;
-  height: 98%;
-}
-
-.MuiSvgIcon-root:hover  {
-  background-color: inherit !important;  
+  padding-right: 30px;
 }
 
 .control-right-sidebar{
   position: absolute;
   bottom: 34px;
-  right: 0px;
+  right: 0;
   height: 40px;
-  font-size: 20px;
+  font-size: 10px;
+  z-index: 1000;
 }
 
 .control-right-sidebar > .MuiSvgIcon-root,
 .right-sidebar-icon > .MuiSvgIcon-root{
-  font-size: 20px!important;  
+  font-size: 10px!important;  
 }
 
 .right-sidebar-icon{
@@ -42,8 +30,93 @@
   padding: 0px 3px;
 }
 
+.MuiSvgIcon-root:hover  {
+  background-color: inherit !important;  
+}
+
+.app-body{
+  display: flex;
+  width: 100%;
+}
+
+.left-app-body{
+  width: 23%;
+}
+
+.noleft-app-body{
+  width: inherit;
+}
+
+.center-app-body{
+  width: 75%;
+}
+
+.center-app-noleftsidebar{
+  width: 80%;
+}
+
+.center-app-body-nomenu{
+  width: 85%;
+}
+
+.no-activemenu{
+  width: 90%;
+}
+
+.no-no{
+  width: 91%;
+}
+
+/* .center-app-body > div{
+  border: 1px solid red;
+} */
+
+.right-app-body{
+  width: 5%;
+  margin-left: 20px;
+}
+
 @media only screen and (max-width: 768px){
+  .app{
+    padding-right: 0;
+  }
+
+  .app-body{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .left-app-body{
+    z-index: 1000;
+  }
+
   .control-right-sidebar{
     display: none;
   }
+
+  .left-app-body{
+    width: 0;
+  }
+  
+  .center-app-noleftsidebar{
+    width: 90%;
+    /* margin: 0 20px; */
+  }
+}
+@media only screen and (max-width: 768px){
+  .app{
+    padding: 0 30px;
+  }
+  .app-body{
+    padding: 0 0px;
+  }
+  .center-app-body{
+    width: inherit;
+  }
+  .right-app-body{
+    width: 0%;
+    margin-left: 0px;
+  }
+ 
 }

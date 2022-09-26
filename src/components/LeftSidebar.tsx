@@ -10,7 +10,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import LabelIcon from '@mui/icons-material/Label';
 
 const LeftSidebar: React.FC = () => {
-    const {sidebar, setSidebar, activeMenu, setActiveMenu, screenSize, setScreenSize, moreSidebarItems, setMoreSidebarItems} = useContextState()
+    const {sidebar, setSidebar, activeMenu, setActiveMenu, screenSize, setScreenSize, moreSidebarItems, setMoreSidebarItems, setCompose} = useContextState()
     // const history = useHis
     // useHis
 
@@ -24,11 +24,9 @@ const LeftSidebar: React.FC = () => {
             </IconButton>
         </div>
         {/* </Link> */}
-        <div className='compose'>
-            {/* <IconButton className='items'> */}
-                <EditIcon />
-            {/* </IconButton> */}
-        {activeMenu && <p className=''>compose</p>}
+        <div className='compose' onClick={() => setCompose(true)}>
+            <EditIcon />
+            {activeMenu && <p className=''>compose</p>}
         </div>
         <div className='sidebar-links'>
         {leftSideBarLink.map((item, index) => (

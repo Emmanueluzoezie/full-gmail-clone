@@ -9,30 +9,51 @@ import Inbox from './pages/Inbox';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { IconButton } from '@mui/material';
+import EditIcon from '@mui/icons-material/Edit';
+import MailIcon from '@mui/icons-material/Mail';
+import VideoCallIcon from '@mui/icons-material/VideoCall';
 
 function App() {
-  const {sidebar, setSidebar, leftSidebar, setLeftSidebar, activeMenu} = useContextState()
+  const {sidebar, setSidebar, rightSidebar, setRightSidebar, activeMenu, setCompose} = useContextState()
 
   return (
     <div className="app">
       <Header />
 
       <div className='control-right-sidebar'>
-        {leftSidebar? (
+        {rightSidebar? (
           <div className='right-sidebar-icon'>
-            <IconButton onClick={() => setLeftSidebar(prev => 
+            <IconButton onClick={() => setRightSidebar(prev => 
           !prev)}>
               <ArrowForwardIosIcon />
             </IconButton>
           </div>
         ) : (
-          <IconButton onClick={() => setLeftSidebar(prev => 
+          <IconButton onClick={() => setRightSidebar(prev => 
           !prev)}>
             <ArrowBackIosIcon />
           </IconButton>
         )}
       </div>
       
+      <div className='mobile-compose' onClick={() => setCompose(true)}>
+            <EditIcon />
+            {activeMenu && <p className=''>compose</p>}
+      </div>
+
+      <div className='mobile-footer'>
+           <div className='footer-items'>
+           <div>
+            <span>90+</span>
+            <MailIcon />
+            <p>Mail</p>
+           </div>
+           <div>
+            <VideoCallIcon />
+            <p>Meet</p>
+           </div>
+           </div>
+      </div>
       
       <BrowserRouter>
         <div className='app-body'>
@@ -44,7 +65,7 @@ function App() {
             ) : (<div className='noleft-app-body'/>) 
           }
           </div>
-          <div className={leftSidebar && activeMenu?"center-app-body" : "no-activemenu" && leftSidebar && !activeMenu?"center-app-body-nomenu" : "no-activemenu" && (activeMenu && !leftSidebar? "center-app-noleftsidebar" : "center-app-body-nomenu")&& (!activeMenu && !leftSidebar? "no-no": "center-app-noleftsidebar")}>
+          <div className={rightSidebar && activeMenu?"center-app-body" : "no-activemenu" && rightSidebar && !activeMenu?"center-app-body-nomenu" : "no-activemenu" && (activeMenu && !rightSidebar? "center-app-noleftsidebar" : "center-app-body-nomenu")&& (!activeMenu && !rightSidebar? "no-no": "center-app-noleftsidebar")}>
             <div>
               <Routes>
                 <Route path='/' element={<Inbox />}  />
@@ -53,7 +74,7 @@ function App() {
               </Routes> 
           </div>
           </div>
-          {leftSidebar &&
+          {rightSidebar &&
           <div className='right-app-body'>
           <RightSidebar />
           </div>}

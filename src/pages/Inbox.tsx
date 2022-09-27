@@ -64,7 +64,7 @@ const Inbox = () => {
         </div>}
       <PagesHeader />
       <InputHeader />
-      <MailRow icon={<StarBorderIcon />}/>
+      {/* <MailRow title="Emmanuel uzoezie" icon={<StarBorderIcon />}/>
       <MailRow />
       <MailRow />
       <MailRow />
@@ -74,7 +74,7 @@ const Inbox = () => {
       <MailRow />
       <MailRow />
       <MailRow />
-      <MailRow />
+      <MailRow /> */}
     </div>
   )
 }

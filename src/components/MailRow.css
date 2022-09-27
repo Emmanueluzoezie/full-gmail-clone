@@ -1,0 +1,170 @@
+.mailrow,
+.left-mailrow > div,
+.center-mailrow,
+.center-mailrow-body{
+    display: flex;
+    align-items: center;
+}
+
+.mailrow{
+    width: 98.5%; 
+}
+
+.mailrow > div {
+    width: inherit;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgb(227, 226, 226);
+    cursor: pointer;
+    padding-left: 25px;
+}
+
+.mailrow > div:hover {
+    border: 1px solid rgb(211, 211, 211);
+    border-bottom: 2px solid rgb(211, 211, 211);
+}
+
+/* .left-mailrow {
+    border: 1px solid red;
+} */
+
+.left-mailrow > .MuiSvgIcon-root{
+    font-size: 10px !important;
+}
+
+.center-mailrow-body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    font-size: 15px;
+    /* width: 40%; */
+}
+
+.center-mailrow > h4  > p{
+    margin: 5px;
+    font-weight: lighter;
+}
+
+.center-mailrow > h2{
+    margin: 0;
+    min-width: 240px;
+    font-size: 17px;
+}
+
+.center-mailrow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0px 10px;
+    width: 80%;
+    /* flex: 1; */
+}
+
+.right-mailrow{
+    margin-left: 45px;
+}
+
+.hover-mailrow,
+.left-mailrow > .avatar, 
+.right-mailrow > .MuiSvgIcon-root{
+    display: none;
+}
+
+@media only screen and (min-width: 992px){
+    .center-mailrow {
+        display: flex;
+        align-items: center;
+    }
+
+    
+}
+
+@media only screen and (max-width: 768px){
+    .mailrow{
+        width: 100%; 
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    .mailrow > div {
+        width: inherit;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 15px;
+        background-color: #ececec;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .left-mailrow > .avatar{
+        display: flex ;
+        margin: 0 10px;
+        padding: 0;
+    }
+
+    .left-mailrow >div {
+        display: none;
+    }
+
+    .center-mailrow {
+        display: block;
+        margin: 0px 0;
+        width: inherit;
+        flex: 1;
+        padding: 0 20px;
+    }
+
+    .center-mailrow-body{
+        margin: 0;
+        padding: 0;
+        display: block;
+        font-size: 15px;
+    }
+
+    .center-mailrow > h2{
+        margin: 0;
+        min-width: 0px;
+        font-size: 17px;
+        padding: 0;
+        font-weight: 600;
+    }
+
+    .center-mailrow-body > h4{
+        margin: 0px;
+        padding: 0;
+        font-weight: lighter;
+        font-weight: 500;
+        width: 0;
+    }
+
+    .center-mailrow-body > span{
+       display: none;
+    }
+
+    .center-mailrow-body > p{
+        margin: 0px;
+        font-weight: 300;
+        padding: 0;
+    }
+
+    .right-mailrow{
+        margin-left: 0;
+    }
+
+    .right-mailrow > span{
+        font-size: 13px;
+        margin-right: 10px;
+    }
+
+    .right-mailrow > .MuiSvgIcon-root{
+        display: flex;
+        font-size: 20px !important;
+        padding: 0;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+}

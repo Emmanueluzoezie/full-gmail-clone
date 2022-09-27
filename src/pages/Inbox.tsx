@@ -18,7 +18,8 @@ export type MailRowType = {
   name: string,
   title: string,
   description: string,
-  time: number,
+  image: string
+  // time: number | Symbol,
 }
 
 const Inbox = () => {
@@ -64,8 +65,8 @@ const Inbox = () => {
         </div>}
       <PagesHeader />
       <InputHeader />
-      {/* <MailRow title="Emmanuel uzoezie" icon={<StarBorderIcon />}/>
-      <MailRow />
+      <MailRow name="Emmanuel uzoezie" title="Title of the mail" description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit minus cupiditate numquam totam, quo assumenda quos iure rem rerum sit?" image='' icon={<StarBorderIcon />}/>
+      {/* <MailRow />
       <MailRow />
       <MailRow />
       <MailRow />

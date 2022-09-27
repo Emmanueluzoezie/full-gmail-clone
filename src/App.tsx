@@ -11,7 +11,8 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { IconButton } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import MailIcon from '@mui/icons-material/Mail';
-import VideoCallIcon from '@mui/icons-material/VideoCall';
+import VideoChatIcon from '@mui/icons-material/VideoChat';
+import Mail from './pages/Mail';
 
 function App() {
   const {sidebar, setSidebar, rightSidebar, setRightSidebar, activeMenu, setCompose} = useContextState()
@@ -49,7 +50,7 @@ function App() {
             <p>Mail</p>
            </div>
            <div>
-            <VideoCallIcon />
+            <VideoChatIcon />
             <p>Meet</p>
            </div>
            </div>
@@ -69,8 +70,8 @@ function App() {
             <div>
               <Routes>
                 <Route path='/' element={<Inbox />}  />
-                {/* <Route path='/' element={}/>
-                <Route path='/' element={}/> */}
+                <Route path='/mail' element={<Mail />}/>
+                {/* <Route path='/' element={}/> */}
               </Routes> 
           </div>
           </div>

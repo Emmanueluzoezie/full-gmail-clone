@@ -1,0 +1,81 @@
+.mail{
+    padding: 10px;
+}
+
+.mail-body{
+    padding: 10px;
+}
+
+.mail-body-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mail-body-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.body-header-right > span > .MuiSvgIcon-root{
+    padding: 10px !important;
+    font-size: 22px !important;
+    color:rgb(44, 44, 44) !important;
+}
+
+.mail-body-title,
+.mail-body-title > div,
+.mail-name > h4,
+.mail-body-title-right,
+.mail-name > span {
+    display: flex;
+    align-items: center;
+}
+
+.mail-body-title{
+    justify-content: space-between;
+}
+/* 
+.mail-body-title > div{
+    margin-top: 30px;
+} */
+
+.mail-name{
+    margin: 0;
+}
+
+.mail-name{
+    margin: 0;
+    margin-left: 20px;
+}
+
+.mail-name > h4{
+    margin: 0;
+}
+.mail-name > span > .MuiSvgIcon-root{
+    margin: 0;
+    padding: 0;
+}
+
+.mail-body-title-right > h4{
+    margin-right: 20px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+/* .mail-body-title-right > span{
+    padding: 7px;
+    border-radius: 50%;
+} */
+
+
+.mail-body-title-right > span > .MuiSvgIcon-root{
+    margin: 0px;
+    font-size: 20px !important;
+    padding: 5px;
+}
+
+.mail-body-title-right > span > .MuiSvgIcon-root:hover{
+    background-color: rgb(220, 219, 219) !important; ;
+}

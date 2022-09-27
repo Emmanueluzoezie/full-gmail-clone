@@ -12,7 +12,7 @@ import SendIcon from '@mui/icons-material/Send';
 import ScheduleSendIcon from '@mui/icons-material/ScheduleSend';
 import OutboxIcon from '@mui/icons-material/Outbox';
 import MailIcon from '@mui/icons-material/Mail';
-import ErrorIcon from '@mui/icons-material/Error';
+import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SettingsIcon from '@mui/icons-material/Settings';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
@@ -72,7 +72,7 @@ export const moreLeftSideBarLink = [
     },
     {
         name: "Spam",
-        icon: <ErrorIcon />
+        icon: <ReportGmailerrorredIcon />
     },
     {
         name: "Bin",
@@ -151,7 +151,7 @@ export const leftSideBarMobile = [
             },
             {
                 name: "Spam",
-                icon: <ErrorIcon />
+                icon: <ReportGmailerrorredIcon />
             },
             {
                 name: "Bin",
@@ -201,7 +201,7 @@ export const moreSidebarLink = [
     },
     {
         name: "Spam",
-        icon: <ErrorIcon />
+        icon: <ReportGmailerrorredIcon />
     },
     {
         name: "Bin",

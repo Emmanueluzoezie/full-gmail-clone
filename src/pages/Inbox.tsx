@@ -14,6 +14,7 @@ import ScheduleSendIcon from '@mui/icons-material/ScheduleSend';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 
 export type MailRowType = {
+  // id=string
   icon: any,
   name: string,
   title: string,

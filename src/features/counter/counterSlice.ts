@@ -8,11 +8,10 @@ export interface MailItem {
 
 const initialState:MailItem = {
   selectedMail:{
-    icon: null,
-    name: "",
-    title: "",
+    recipients: "",
+    subject: "",
     description: "",
-    image: "",
+    // image: "",
   }
 }
 

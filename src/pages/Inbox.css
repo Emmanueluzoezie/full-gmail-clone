@@ -56,11 +56,11 @@ form > input{
     font-size: 14px;
 }
 
-form > textarea{
+form > .textarea{
     flex: 1;
-    border: none;
+    border: 1px solid red;
     outline: none;
-    padding-top: 14px;
+    /* padding-top: 14px; */
 }
 
 .compose-footer{
@@ -85,7 +85,7 @@ form > textarea{
     background-color: rgb(50, 109, 235);
 }
 
-.send-button > button{
+.send-button > input{
     background-color: inherit;
     outline: none;
     border: none;

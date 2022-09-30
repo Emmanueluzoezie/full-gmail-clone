@@ -6,12 +6,29 @@ import DraftsIcon from '@mui/icons-material/Drafts';
 import AccessAlarmsIcon from '@mui/icons-material/AccessAlarms';
 import "./MailRow.css";
 import {MailRowType } from "../pages/Inbox"
+import { useDispatch } from "react-redux"
+import { selectMail } from "../features/counter/mailSlice"
+import { useNavigate } from 'react-router-dom';
 
-const MailRow = ({description, subject, recipients}:MailRowType) => {
+const MailRow = ({id, description, subject, recipients}:MailRowType) => {
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    const openMail = () => {
+        dispatch(
+            selectMail({
+                id,
+                description, 
+                subject, 
+                recipients
+            })
+        )
+        navigate("/mail")
+    }
 
   return (
     <div className='mailrow'>
-        <div className=''>
+        <div className='' onClick={openMail}>
             <div className='left-mailrow'>
                     <Avatar className='avatar'/>
                     <div>

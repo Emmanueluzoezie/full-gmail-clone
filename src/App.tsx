@@ -13,12 +13,14 @@ import EditIcon from '@mui/icons-material/Edit';
 import MailIcon from '@mui/icons-material/Mail';
 import VideoChatIcon from '@mui/icons-material/VideoChat';
 import Mail from './pages/Mail';
+import Login from './components/Login';
 
 function App() {
   const {sidebar, setSidebar, rightSidebar, setRightSidebar, activeMenu, setCompose} = useContextState()
 
   return (
     <div className="app">
+      {/* <Login /> */}
       <Header />
 
       <div className='control-right-sidebar'>
@@ -71,7 +73,6 @@ function App() {
               <Routes>
                 <Route path='/' element={<Inbox />}  />
                 <Route path='/mail' element={<Mail />}/>
-                {/* <Route path='/' element={}/> */}
               </Routes> 
           </div>
           </div>

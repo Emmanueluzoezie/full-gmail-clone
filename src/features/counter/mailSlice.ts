@@ -4,10 +4,12 @@ import {MailRowType } from "../../pages/Inbox"
 
 export interface MailItem {
   selectedMail: MailRowType,
+
 }
 
 const initialState:MailItem = {
   selectedMail:{
+    id:"",
     recipients: "",
     subject: "",
     description: "",
@@ -27,5 +29,6 @@ export const mailSlice = createSlice({
   
 
 export const { selectMail } = mailSlice.actions;
+export const selectOpenMail = (state:any) => state.mail.selectedMail
 
 export default mailSlice.reducer;

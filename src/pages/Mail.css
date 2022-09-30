@@ -1,5 +1,9 @@
 .mail{
     padding: 10px;
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 40px;
+    border-radius: 20px;
 }
 
 .mail-body{
@@ -64,10 +68,9 @@
     font-size: 14px;
 }
 
-/* .mail-body-title-right > span{
-    padding: 7px;
-    border-radius: 50%;
-} */
+.description{
+    margin-left: 170px;
+}
 
 
 .mail-body-title-right > span > .MuiSvgIcon-root{

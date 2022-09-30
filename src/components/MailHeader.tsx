@@ -13,12 +13,15 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import "./MailHeader.css"
+import { useNavigate } from "react-router-dom"
 
 
 const MailHeader = () => {
+    const navigate = useNavigate()
+
   return (
     <div className='mail-header'>
-        <span><ArrowBackIcon /> </span>
+        <span onClick={() => navigate("/")}><ArrowBackIcon /> </span>
 
         <div className='header-center-icons'>
         <div className='center-icons'>

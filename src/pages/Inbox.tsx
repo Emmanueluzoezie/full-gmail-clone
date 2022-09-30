@@ -20,8 +20,8 @@ import { Timestamp } from 'firebase/firestore'
 
 
 export type MailRowType = {
-  // id=string
   // icon: any,
+  id:string,
   recipients: string,
   subject: string,
   description: string,
@@ -117,18 +117,8 @@ const Inbox = () => {
       <InputHeader />
       {emails.map(({data:{description, subject, recipients}, id}:emailType) => (
         // console.log(description)
-          <MailRow key={id} description={description} subject={subject} recipients={recipients}/>
+          <MailRow key={id} id={id} description={description} subject={subject} recipients={recipients}/>
       ))}
-      {/* <MailRow />
-      <MailRow />
-      <MailRow />
-      <MailRow />
-      <MailRow />
-      <MailRow />
-      <MailRow />
-      <MailRow />
-      <MailRow />
-      <MailRow /> */}
     </div>
   )
 }

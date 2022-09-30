@@ -90,7 +90,7 @@ const Inbox = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
             <input placeholder='Recipients' type="email"   {...register("recipients", { required: true })} />
             <input placeholder='Subject' type="text"  {...register("subject", { required: true })} />
-            <input placeholder='description' type="text" className='textarea'  {...register("description", { required: true })} />
+            <textarea placeholder='description' className='textarea'  {...register("description", { required: true })} />
           <div className='compose-footer'>
             <div className='send-button'>
               <input type="submit" />
@@ -104,12 +104,12 @@ const Inbox = () => {
                   </ul>}
               </div>
             </div>
-            <div>
+            <div className='compose-icons'>
               {composeIcons.map((item, index) => (
                 <span className='compose-footer-icon' key={index}>{item}</span>
               ))}
             </div>
-            <DeleteOutlineIcon style={{marginLeft:"20px"}}/>
+            <DeleteOutlineIcon className='delete-icon' style={{marginLeft:"20px"}}/>
           </div>
           </form>
         </div>}

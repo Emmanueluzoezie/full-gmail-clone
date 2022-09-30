@@ -89,12 +89,19 @@
 
 @media only screen and (max-width: 768px){
   .app{
-    padding: 0 30px;
+    padding: 0 20px;
   }
 
   .app-body{
     padding: 0 0px;
+    margin: 10px 0;
   }
+
+  .app-body > div{
+    padding: 0 0px;
+    margin: 0px 0;
+  }
+
   .center-app-body{
     width: inherit;
   }
@@ -105,12 +112,12 @@
 
   .mobile-compose{
     position: fixed;
-    bottom: 120px;
+    bottom: 80px;
     right: 30px;
     background-color: rgb(210, 210, 210);
     display: flex;
     align-items: center;
-    padding: 6px 8px;
+    padding: 10px 8px;
     border-radius: 13px;
     cursor: pointer;
     z-index: 100;
@@ -147,7 +154,6 @@
   
   .center-app-noleftsidebar{
     width: 90%;
-    /* margin: 0 20px; */
   }
 
   .mobile-footer{

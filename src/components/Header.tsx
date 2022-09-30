@@ -8,9 +8,21 @@ import SettingsIcon from "@mui/icons-material/Settings"
 import AppsIcon from '@mui/icons-material/Apps';
 import TuneIcon from '@mui/icons-material/Tune';
 import { Avatar, IconButton } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout, selectedUser } from '../features/counter/userSlice';
+import { auth } from '../firebase';
+
 
 const Header = () => {
     const {sidebar, setSidebar, screenSize, setScreenSize, activeMenu, setActiveMenu} = useContextState()
+    const user = useSelector(selectedUser)
+    const dispatch = useDispatch()
+
+    console.log(user)
+
+    const signOut = () => {
+      auth.signOut().then(() => dispatch(logout()))
+    }
 
     useEffect(()=> {
         const handleSidebar = () => setScreenSize(window.innerWidth)
@@ -62,7 +74,7 @@ const Header = () => {
             </IconButton>
         </div>
         <div className='avatar'>
-            <Avatar  />
+            <Avatar src={user.photoUrl}  onClick={signOut}/>
         </div>
     </nav>
     </div>

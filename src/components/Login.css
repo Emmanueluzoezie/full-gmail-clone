@@ -25,5 +25,15 @@
 
 .login-item > Button:hover{
     /* width: 100%; */
-    background-color: blue;
+    background-color: rgb(17, 99, 240);
+}
+
+@media only screen and (max-width: 768px){
+    .login-item > img{
+        height: 160px;
+    }
+    .login-item > Button{
+        font-weight: bolder;
+        font-size: 18px;
+    }
 }
